@@ -1,10 +1,11 @@
-const { Router } = require("express")
+const { Router } = require("express");
 
-const TurmasController = require("../controllers/TurmasController")
+const TurmasController = require("../controllers/TurmasController");
 
-const turmasRoutes = Router()
-const turmasController = new TurmasController()
+const turmasRoutes = Router();
+const turmasController = new TurmasController();
 
-turmasRoutes.post("/", turmasController.create)
+turmasRoutes.post("/", turmasController.create);
+turmasRoutes.get("/", turmasController.read);
 
-module.exports = turmasRoutes
+module.exports = turmasRoutes;
